@@ -6,7 +6,7 @@ typing-extensions>=4.8.0
 
 # Optional: Enhanced terminal features
 pyfiglet>=1.0.2
-animated-terminal>=1.0.0
+# animated-terminal removed (no PyPI distribution)
 blessed>=1.20.0
 
 # Development dependencies (optional)
