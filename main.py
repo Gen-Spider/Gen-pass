@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Gen-Pass: A Professional Password Generator with Matrix UI
-========================================================
+Gen-Pass: Professional Password Generator with Matrix UI
+=======================================================
 
-A secure, customizable password generator with full-screen terminal interface,
-3D Git Spider banner, and red themed text animations.
+A secure, customizable password generator with terminal Matrix UI,
+Git Spider branding, green-themed text, larger banner, and falling password matrix.
 
 Author: Gen-Spider
 License: MIT
@@ -26,29 +26,28 @@ try:
     from rich.panel import Panel
     from rich.text import Text
     from rich.align import Align
-    from rich.live import Live
     from rich.progress import Progress, SpinnerColumn, TextColumn
     import colorama
-    from colorama import Fore, Back, Style, init
+    from colorama import Fore, Style, init
 except ImportError:
-    print("Installing required dependencies...")
     os.system("pip install rich colorama")
     from rich.console import Console
     from rich.panel import Panel
     from rich.text import Text
     from rich.align import Align
-    from rich.live import Live
     from rich.progress import Progress, SpinnerColumn, TextColumn
     import colorama
-    from colorama import Fore, Back, Style, init
+    from colorama import Fore, Style, init
 
 # Initialize colorama for Windows compatibility
 init(autoreset=True)
 
+GREEN = "\033[92m"
+RESET = "\033[0m"
+BOLD = "\033[1m"
+
 class MatrixUI:
-    """
-    Terminal interface with Git Spider branding and red text animations.
-    """
+    """Terminal interface with Git Spider branding and green text animations."""
     
     def __init__(self):
         self.console = Console()
@@ -56,65 +55,61 @@ class MatrixUI:
         self.height = self.console.size.height
         
     def clear_screen(self):
-        """Clear the terminal screen."""
         os.system('cls' if os.name == 'nt' else 'clear')
         
-    def typewriter_effect(self, text: str, delay: float = 0.03, color: str = "red"):
-        """Print text with typewriter effect in red."""
-        color_code = "\033[91m" if color == "red" else ""
+    def typewriter_effect(self, text: str, delay: float = 0.03, color_code: str = GREEN):
         for char in text:
-            print(f"{color_code}{char}\033[0m", end='', flush=True)
+            print(f"{color_code}{char}{RESET}", end='', flush=True)
             time.sleep(delay)
         print()
         
     def show_git_spider_banner(self):
-        """Display the Git Spider banner (red text only)."""
+        """Display a larger Git Spider banner (green text only)."""
         self.clear_screen()
-        
-        banner = """
-██████████████████████████████████████████████████████████████████████████████
-██                                                                            ██
-██    ██████╗ ██╗████████╗       ███████╗██████╗ ██╗██████╗ ███████╗██████╗    ██
-██    ██╔══██╗██║╚══██╔══╝       ██╔════╝██╔══██╗██║██╔══██╗██╔════╝██╔══██╗   ██
-██    ██║  ██║██║   ██║          ███████╗██████╔╝██║██║  ██║█████╗  ██████╔╝   ██
-██    ██║  ██║██║   ██║          ╚════██║██╔═══╝ ██║██║  ██║██╔══╝  ██╔══██╗   ██
-██    ██████╔╝██║   ██║          ███████║██║     ██║██████╔╝███████╗██║  ██║   ██
-██    ╚═════╝ ╚═╝   ╚═╝          ╚══════╝╚═╝     ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝   ██
-██                                                                            ██
-██                            🕷️   GIT SPIDER SECURITY   🕷️                          ██
-██                                                                            ██
-██████████████████████████████████████████████████████████████████████████████
+        banner = r"""
+██████████████████████████████████████████████████████████████████████████████████
+██                                                                                  ██
+██   ██████╗ ██╗████████╗        ███████╗██████╗ ██╗██████╗ ███████╗██████╗          ██
+██   ██╔══██╗██║╚══██╔══╝        ██╔════╝██╔══██╗██║██╔══██╗██╔════╝██╔══██╗         ██
+██   ██║  ██║██║   ██║           ███████╗██████╔╝██║██║  ██║█████╗  ██████╔╝         ██
+██   ██║  ██║██║   ██║           ╚════██║██╔═══╝ ██║██║  ██║██╔══╝  ██╔══██╗         ██
+██   ██████╔╝██║   ██║           ███████║██║     ██║██████╔╝███████╗██║  ██║         ██
+██   ╚═════╝ ╚═╝   ╚═╝           ╚══════╝╚═╝     ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝         ██
+██                                                                                  ██
+██                     🕷️   G I T   S P I D E R   S E C U R I T Y   🕷️                  ██
+██                                                                                  ██
+██████████████████████████████████████████████████████████████████████████████████
 """
-        # Only red text (no full-screen red background)
         for line in banner.split('\n'):
-            print(f"\033[91m\033[1m{line}\033[0m")
+            print(f"{BOLD}{GREEN}{line}{RESET}")
         
-    def show_matrix_rain(self, duration: int = 2):
-        """Show subtle matrix-style tickers with red glyphs (no background fill)."""
-        chars = "0123456789ABCDEF!@#$%^&*()_+-=[]{}|;:,.<>?"
-        start_time = time.time()
-        while time.time() - start_time < duration:
-            col = random.randint(1, max(1, self.width - 2))
-            row = random.randint(1, max(1, self.height - 2))
-            char = random.choice(chars)
-            print(f"\033[{row};{col}H\033[91m{char}\033[0m", end='', flush=True)
-            time.sleep(0.01)
-        print("\033[0m", end='')
+    def show_password_matrix(self, duration: int = 3):
+        """Render falling password-like glyphs in green (non-blocking feel)."""
+        glyphs = string.ascii_letters + string.digits + "!@#$%^&*()_+" \
+                 + "-=[]{},.<>?"
+        start = time.time()
+        # Prepare columns for cascading
+        columns = [random.randint(0, self.height // 2) for _ in range(max(10, self.width // 4))]
+        while time.time() - start < duration:
+            col = random.randint(1, max(2, self.width - 2))
+            row = random.randint(1, max(2, self.height - 2))
+            ch = random.choice(glyphs)
+            print(f"\033[{row};{col}H{GREEN}{ch}{RESET}", end='', flush=True)
+            time.sleep(0.008)
+        print(RESET, end='')
         
-    def show_loading_animation(self, text: str = "Initializing Git Spider"):
-        """Show loading animation with red spinner text."""
+    def show_loading(self, text: str = "Starting Git Spider Console"):
         with Progress(
-            SpinnerColumn("dots", style="red"),
-            TextColumn("[red]{task.description}"),
+            SpinnerColumn("dots", style="green"),
+            TextColumn("[green]{task.description}"),
             console=self.console
         ) as progress:
-            task = progress.add_task(text, total=100)
-            for _ in range(100):
+            task = progress.add_task(text, total=80)
+            for _ in range(80):
                 progress.update(task, advance=1)
                 time.sleep(0.015)
         
     def show_menu(self):
-        """Display the main menu with red-styled text."""
         menu_panel = Panel(
             Text("""
 🔐 PASSWORD GENERATION OPTIONS 🔐
@@ -126,25 +121,20 @@ class MatrixUI:
 5. ⚙️  Advanced Settings
 6. 🚪 Exit
 
-Enter your choice (1-6): """, style="bold red"),
-            title="[bold red]🕷️ GIT SPIDER MATRIX 🕷️[/bold red]",
-            border_style="red",
+Enter your choice (1-6): """, style="bold green"),
+            title="[bold green]🕷️ GIT SPIDER MATRIX 🕷️[/bold green]",
+            border_style="green",
             padding=(1, 2)
         )
         self.console.print(Align.center(menu_panel))
         
     def animated_text(self, text: str, delay: float = 0.05):
-        """Display red animated text."""
         for char in text:
-            print(f"\033[91m{char}\033[0m", end='', flush=True)
+            print(f"{GREEN}{char}{RESET}", end='', flush=True)
             time.sleep(delay)
         print()
 
 class PasswordGenerator:
-    """
-    Enhanced password generator with Matrix UI integration.
-    """
-    
     def __init__(self, ui_mode: bool = True):
         self.ui = MatrixUI() if ui_mode else None
         self.lowercase = string.ascii_lowercase
@@ -154,20 +144,17 @@ class PasswordGenerator:
         self.ambiguous = "0O1lI"
         
     def launch_matrix_mode(self):
-        """Launch the experience with Git Spider banner and red text only."""
         if not self.ui:
             return
         self.ui.show_git_spider_banner()
-        time.sleep(1.2)
-        print("\n")
-        self.ui.show_loading_animation("Loading Git Spider Security Console...")
-        time.sleep(0.5)
-        self.ui.show_matrix_rain(1)
+        time.sleep(1.0)
+        print()
+        self.ui.show_loading("Loading Git Spider Security Console...")
+        time.sleep(0.3)
+        self.ui.show_password_matrix(2)
         print("\n")
         self.ui.show_menu()
         
-    # ... the rest of the class remains unchanged from previous version ...
-
     def generate_password(self, 
                          length: int = 12,
                          use_uppercase: bool = True,
@@ -201,7 +188,7 @@ class PasswordGenerator:
         secrets.SystemRandom().shuffle(password)
         generated_password = ''.join(password)
         if animated and self.ui:
-            print("\n\033[91m█████ GENERATING SECURE PASSWORD █████\033[0m")
+            print(f"\n{GREEN}█████ GENERATING SECURE PASSWORD █████{RESET}")
             self.ui.animated_text(f"Password: {generated_password}")
         return generated_password
 
@@ -230,7 +217,7 @@ class PasswordGenerator:
             numbers = ''.join([str(secrets.randbelow(10)) for _ in range(2)])
             passphrase += separator + numbers
         if animated and self.ui:
-            print("\n\033[91m█████ GENERATING SECURE PASSPHRASE █████\033[0m")
+            print(f"\n{GREEN}█████ GENERATING SECURE PASSPHRASE █████{RESET}")
             self.ui.animated_text(f"Passphrase: {passphrase}")
         return passphrase
 
@@ -274,9 +261,9 @@ class PasswordGenerator:
             "strength_bar": strength_bar
         }
         if animated and self.ui:
-            print("\n\033[91m█████ ANALYSIS COMPLETE █████\033[0m")
+            print(f"\n{GREEN}█████ ANALYSIS COMPLETE █████{RESET}")
             self.ui.animated_text(f"Strength: {strength}")
-            self.ui.animated_text(f"Security Level: [{strength_bar}] {score}%", 0.02)
+            self.ui.animated_text(f"Security Level: [{strength_bar}] {analysis['score']}%", 0.02)
         return analysis
 
 def main():
@@ -309,41 +296,41 @@ def main():
             generator.launch_matrix_mode()
             while True:
                 try:
-                    choice = input("\n\033[91mCommand: \033[0m").strip()
+                    choice = input(f"\n{GREEN}Command: {RESET}").strip()
                     if choice == '1':
-                        length = int(input("\033[91mPassword Length (12): \033[0m") or "12")
+                        length = int(input(f"{GREEN}Password Length (12): {RESET}") or "12")
                         pwd = generator.generate_password(length=length, animated=True)
                         generator.check_strength(pwd, animated=True)
                     elif choice == '2':
-                        words = int(input("\033[91mWords (4): \033[0m") or "4")
+                        words = int(input(f"{GREEN}Words (4): {RESET}") or "4")
                         phrase = generator.generate_passphrase(word_count=words, animated=True)
                         generator.check_strength(phrase, animated=True)
                     elif choice == '3':
-                        to_check = input("\033[91mEnter Password: \033[0m")
+                        to_check = input(f"{GREEN}Enter Password: {RESET}")
                         generator.check_strength(to_check, animated=True)
                     elif choice == '4':
-                        count = int(input("\033[91mHow many (5): \033[0m") or "5")
-                        print("\n\033[91m█████ BATCH █████\033[0m")
+                        count = int(input(f"{GREEN}How many (5): {RESET}") or "5")
+                        print(f"\n{GREEN}█████ BATCH █████{RESET}")
                         for _ in range(count):
                             generator.generate_password(animated=True)
-                            time.sleep(0.3)
+                            time.sleep(0.25)
                     elif choice == '6' or choice.lower() in ['exit','quit','q']:
-                        generator.ui.animated_text("\n🔴 Goodbye from Git Spider! 🔴", 0.05)
+                        generator.ui.animated_text("\n🟢 Goodbye from Git Spider! 🟢", 0.05)
                         break
                     else:
-                        print("\033[91mPick 1-6.\033[0m")
+                        print(f"{GREEN}Pick 1-6.{RESET}")
                 except KeyboardInterrupt:
-                    generator.ui.animated_text("\n\n🔴 Session Interrupted. 🔴", 0.05)
+                    generator.ui.animated_text("\n\n🟢 Session Interrupted. 🟢", 0.05)
                     break
                 except Exception as e:
-                    print(f"\033[91mError: {e}\033[0m")
+                    print(f"{GREEN}Error: {e}{RESET}")
         except KeyboardInterrupt:
-            print("\n\033[91m🔴 Session Terminated \033[0m")
+            print(f"\n{GREEN}🟢 Session Terminated {RESET}")
         return
 
     if args.check:
         analysis = generator.check_strength(args.check, animated=args.animate)
-        print(f"\nPassword Strength Analysis:")
+        print("\nPassword Strength Analysis:")
         print(f"Password: {args.check}")
         print(f"Strength: {analysis['strength']}")
         print(f"Score: {analysis['score']}/100")
