@@ -11,7 +11,8 @@
   <img src="https://img.shields.io/badge/Status-Active-brightgreen.svg?style=for-the-badge&logo=activity&logoColor=white&labelColor=000&color=ff0000" alt="Status"/>
 </p>
 
-<!-- 3D CSS Animations -->
+<!--
+Hidden CSS Animations (Preserved for compatible viewers)
 <style>
 @keyframes float {
   0% { transform: translateY(0px) rotateX(0deg); }
@@ -44,10 +45,11 @@
 .rotating { animation: rotate3d 10s linear infinite; }
 .pulsing { animation: pulse 2s ease-in-out infinite; }
 </style>
+-->
 
-<!-- 3D Animated Logo -->
+<!-- 3D Animated Gen-Spider Logo -->
 <div class="rotating" style="display: inline-block; margin: 20px;">
-  <img src="https://via.placeholder.com/150x150/FF0000/FFFFFF?text=🔐" alt="Gen-Pass Logo" style="border-radius: 50%; border: 3px solid #ff0000;"/>
+  <h1>🔐 GEN-SPIDER SECURITY 🔐</h1>
 </div>
 
 </div>
@@ -113,7 +115,20 @@ python main.py
 
 <div align="center">
 
-![Terminal Demo](https://via.placeholder.com/800x400/000000/FF0000?text=🔴+FULL+SCREEN+TERMINAL+🔴)
+```
+╔═══════════════════════════════════════════════════════════════════════╗
+║                      🔴 FULL SCREEN TERMINAL 🔴                      ║
+║                                                                       ║
+║    ██████╗ ███████╗███╗   ██╗      ███████╗██████╗ ██╗██████╗ ███████║
+║    ██╔══██╗██╔════╝████╗  ██║      ██╔════╝██╔══██╗██║██╔══██╗██╔════║
+║    ██║  ██║█████╗  ██╔██╗ ██║█████╗███████╗██████╔╝██║██║  ██║█████╗ ║
+║    ██║  ██║██╔══╝  ██║╚██╗██║╚════╝╚════██║██╔═══╝ ██║██║  ██║██╔══╝ ║
+║    ██████╔╝███████╗██║ ╚████║      ███████║██║     ██║██████╔╝███████║
+║    ╚═════╝ ╚══════╝╚═╝  ╚═══╝      ╚══════╝╚═╝     ╚═╝╚═════╝ ╚══════║
+║                                                                       ║
+║                    🔴 RED MATRIX ENVIRONMENT 🔴                      ║
+╚═══════════════════════════════════════════════════════════════════════╝
+```
 
 </div>
 
@@ -259,9 +274,17 @@ analysis = generator.analyze_interactive("MyPassword123!")
 
 ## 🎮 **INTERACTIVE DEMO**
 
-![Demo GIF](https://via.placeholder.com/600x300/000000/FF0000?text=🔴+ANIMATED+DEMO+🔴)
+```
+🔴 TERMINAL ANIMATION PREVIEW 🔴
 
-**Click to experience the Matrix!**
+[█████████████████████████████████████████████] 100%
+Generating quantum-secure password...
+Password: X#9mK@2vL8$nP5qZ4!wE7*tY1&uI0
+Strength: ████████████████████████ MAXIMUM
+Matrix Mode: ACTIVATED ✓
+```
+
+**Experience the full terminal animation!**
 
 </div>
 
