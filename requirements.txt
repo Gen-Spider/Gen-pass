@@ -1,0 +1,53 @@
+# Gen-Pass Enterprise Security Suite - Core Dependencies
+# =======================================================
+# Essential packages for the main.py password generator
+
+# Core UI and Terminal Enhancement
+# --------------------------------
+rich>=13.5.0                  # Beautiful terminal interface and progress bars
+colorama>=0.4.6               # Cross-platform colored terminal text
+
+# Cryptographic Libraries (Standard Library Alternatives)
+# -------------------------------------------------------
+# Note: main.py uses built-in modules (secrets, hashlib, string, math)
+# These are optional enhancements for advanced features:
+
+cryptography>=41.0.0          # Advanced cryptographic operations (optional)
+passlib[argon2,bcrypt]>=1.7.4  # Advanced password hashing (optional)
+
+# Development and Testing (Optional)
+# ---------------------------------
+pytest>=7.4.0                 # Testing framework
+black>=23.7.0                 # Code formatter
+flake8>=6.1.0                 # Style guide enforcement
+bandit>=1.7.5                 # Security linter
+
+# Performance Enhancement (Optional)
+# ---------------------------------
+numpy>=1.24.0                 # For advanced entropy calculations (optional)
+scipy>=1.11.0                 # Scientific computing (optional)
+
+# System Utilities (Optional)
+# --------------------------
+psutil>=5.9.5                 # System and process utilities
+
+# Platform-specific Dependencies (Optional)
+# ----------------------------------------
+pywin32>=306; sys_platform == "win32"        # Windows API access
+comtypes>=1.2.0; sys_platform == "win32"     # Windows COM interface
+
+# ============================================================================
+# INSTALLATION INSTRUCTIONS:
+# -------------------------
+# 
+# Minimal Installation (just UI enhancements):
+# pip install rich colorama
+#
+# Standard Installation (recommended):
+# pip install -r requirements.txt
+#
+# The main.py file will auto-install rich and colorama if missing,
+# so you can run it immediately with just Python 3.8+
+#
+# For enterprise features, install additional packages as needed.
+# ============================================================================
