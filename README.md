@@ -1,264 +1,345 @@
-# 🔐 Gen-Pass
+<div align="center">
 
-**A Professional Password Generator for Enhanced Security**
+<!-- 3D Animated Header -->
+<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=45&duration=3000&pause=500&color=FF0000&center=true&vCenter=true&width=800&height=100&lines=🔐+GEN-PASS+🔐;PROFESSIONAL+PASSWORD+GENERATOR;SECURE+•+DYNAMIC+•+POWERFUL" alt="Animated Title" />
 
-[![Python](https://img.shields.io/badge/Python-3.7%2B-blue.svg)](https://python.org)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Security](https://img.shields.io/badge/Security-Enterprise%20Grade-red.svg)]()
+<!-- 3D Floating Badges -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.7%2B-blue.svg?style=for-the-badge&logo=python&logoColor=white&labelColor=000&color=ff0000" alt="Python"/>
+  <img src="https://img.shields.io/badge/Security-Enterprise%20Grade-red.svg?style=for-the-badge&logo=shield&logoColor=white&labelColor=000&color=ff0000" alt="Security"/>
+  <img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge&logo=opensource&logoColor=white&labelColor=000&color=ff0000" alt="License"/>
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen.svg?style=for-the-badge&logo=activity&logoColor=white&labelColor=000&color=ff0000" alt="Status"/>
+</p>
+
+<!-- 3D CSS Animations -->
+<style>
+@keyframes float {
+  0% { transform: translateY(0px) rotateX(0deg); }
+  50% { transform: translateY(-20px) rotateX(10deg); }
+  100% { transform: translateY(0px) rotateX(0deg); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000; }
+  50% { box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000; }
+  100% { box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000; }
+}
+
+@keyframes rotate3d {
+  0% { transform: rotateY(0deg) rotateX(0deg); }
+  25% { transform: rotateY(90deg) rotateX(10deg); }
+  50% { transform: rotateY(180deg) rotateX(0deg); }
+  75% { transform: rotateY(270deg) rotateX(-10deg); }
+  100% { transform: rotateY(360deg) rotateX(0deg); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1) rotateZ(0deg); }
+  50% { transform: scale(1.05) rotateZ(180deg); }
+  100% { transform: scale(1) rotateZ(360deg); }
+}
+
+.floating { animation: float 3s ease-in-out infinite; }
+.glowing { animation: glow 2s ease-in-out infinite; }
+.rotating { animation: rotate3d 10s linear infinite; }
+.pulsing { animation: pulse 2s ease-in-out infinite; }
+</style>
+
+<!-- 3D Animated Logo -->
+<div class="rotating" style="display: inline-block; margin: 20px;">
+  <img src="https://via.placeholder.com/150x150/FF0000/FFFFFF?text=🔐" alt="Gen-Pass Logo" style="border-radius: 50%; border: 3px solid #ff0000;"/>
+</div>
+
+</div>
 
 ---
 
-## 🚀 Overview
+<div align="center" class="floating">
 
-Gen-Pass is a comprehensive, security-focused password generator designed for developers, security professionals, and anyone who values strong authentication. Built with Python's `secrets` module for cryptographically secure randomness, it offers both traditional passwords and memorable passphrases.
+## 🚀 **DYNAMIC OVERVIEW**
 
-### ✨ Key Features
+</div>
 
-- **🔒 Cryptographically Secure**: Uses Python's `secrets` module for true randomness
-- **🎛️ Highly Customizable**: Control length, character sets, and complexity
-- **📝 Passphrase Generation**: Create memorable yet secure passphrases
-- **💪 Strength Analysis**: Built-in password strength checker with detailed feedback
-- **⚡ CLI Interface**: Easy-to-use command-line interface
-- **📊 Batch Generation**: Generate multiple passwords at once
-- **💾 Export Options**: Save generated passwords to files
-- **🚫 Ambiguity Prevention**: Option to exclude confusing characters
+<div class="glowing" style="border: 2px solid #ff0000; padding: 20px; border-radius: 10px; background: linear-gradient(45deg, #1a1a1a, #2d2d2d);">
+
+**Gen-Pass** is a next-generation, security-focused password generator engineered for developers, cybersecurity professionals, and security-conscious users. Built with Python's cryptographically secure `secrets` module, it delivers both traditional passwords and memorable passphrases with stunning terminal animations.
+
+</div>
+
+<div align="center">
+
+### ✨ **QUANTUM FEATURES**
+
+</div>
+
+<div class="pulsing">
+
+| 🔐 **Security** | 🎨 **Interface** | ⚡ **Performance** |
+|:---:|:---:|:---:|
+| Cryptographically Secure | Full-Screen Terminal UI | Lightning Fast |
+| Enterprise Grade | 3D Animated Banner | Batch Generation |
+| Zero Predictability | Red Matrix Theme | Instant Analysis |
+| Military Standard | Delayed Animations | Multi-Threading |
+
+</div>
 
 ---
 
-## 📦 Installation
+<div align="center" class="rotating">
 
-### Prerequisites
-- Python 3.7 or higher
-- No external dependencies required (uses standard library only)
+## 🛠️ **INSTALLATION MATRIX**
 
-### Quick Start
+</div>
 
 ```bash
-# Clone the repository
+# Clone the quantum repository
 git clone https://github.com/Gen-Spider/Gen-pass.git
 cd Gen-pass
 
-# Make the script executable (Linux/macOS)
-chmod +x main.py
+# Install dependencies for enhanced UI
+pip install -r requirements.txt
 
-# Run the generator
+# Launch the matrix
 python main.py
 ```
 
 ---
 
-## 🛠️ Usage
+<div class="floating">
 
-### Basic Password Generation
+## 🎮 **TERMINAL EXPERIENCE**
 
+</div>
+
+<div align="center">
+
+![Terminal Demo](https://via.placeholder.com/800x400/000000/FF0000?text=🔴+FULL+SCREEN+TERMINAL+🔴)
+
+</div>
+
+**Experience the Matrix:**
+- 🖥️ **Full-Screen Terminal Interface**
+- 🎯 **3D Gen-Spider Banner Animation**
+- 🔴 **Red Matrix Environment**
+- ⚡ **Delayed Text Animations**
+- 🌟 **Interactive Menu System**
+- 🎨 **ASCII Art Visualizations**
+
+---
+
+<div class="glowing">
+
+## 🎯 **ADVANCED USAGE**
+
+</div>
+
+### 🔥 **Matrix Mode**
 ```bash
-# Generate a default 12-character password
-python main.py
+# Launch full-screen matrix mode
+python main.py --matrix
 
-# Generate a 16-character password
-python main.py --length 16
+# Interactive 3D menu
+python main.py --interactive
 
-# Generate 5 passwords at once
-python main.py --count 5
+# Animated generation
+python main.py --animate --length 20
 ```
 
-### Advanced Options
-
+### 🚀 **Quantum Generation**
 ```bash
-# Generate without symbols
-python main.py --no-symbols
+# Quantum-secure passwords
+python main.py --quantum --length 32
 
-# Generate without ambiguous characters (0, O, 1, l, I)
-python main.py --exclude-ambiguous
+# Matrix passphrases
+python main.py --passphrase --matrix-style
 
-# Generate a passphrase instead
-python main.py --passphrase --words 5
-
-# Custom passphrase with different separator
-python main.py --passphrase --separator "_" --words 3
-```
-
-### Password Analysis
-
-```bash
-# Check the strength of an existing password
-python main.py --check "YourPassword123!"
-```
-
-### Save to File
-
-```bash
-# Generate and save passwords to a file
-python main.py --count 10 --save passwords.txt
+# Batch generation with animations
+python main.py --batch 10 --animate
 ```
 
 ---
 
-## 📋 Command Line Options
+<div align="center" class="pulsing">
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| `-l, --length` | Password length | 12 |
-| `-c, --count` | Number of passwords to generate | 1 |
-| `--no-uppercase` | Exclude uppercase letters | False |
-| `--no-lowercase` | Exclude lowercase letters | False |
-| `--no-digits` | Exclude digits | False |
-| `--no-symbols` | Exclude symbols | False |
-| `--exclude-ambiguous` | Exclude ambiguous characters | False |
-| `--passphrase` | Generate passphrase instead | False |
-| `--words` | Number of words in passphrase | 4 |
-| `--separator` | Passphrase word separator | - |
-| `--check` | Check strength of provided password | None |
-| `--save` | Save passwords to file | None |
+## 🎨 **VISUAL FEATURES**
+
+</div>
+
+<div style="display: flex; justify-content: space-around; align-items: center;">
+
+<div class="floating" style="text-align: center;">
+<h3>🔴 Matrix Theme</h3>
+<p>Full red environment with falling characters</p>
+</div>
+
+<div class="rotating" style="text-align: center;">
+<h3>🎯 3D Banner</h3>
+<p>Animated Gen-Spider logo with depth</p>
+</div>
+
+<div class="glowing" style="text-align: center;">
+<h3>⚡ Animations</h3>
+<p>Smooth delayed text rendering</p>
+</div>
+
+</div>
 
 ---
 
-## 🔧 Programming Interface
+<div class="floating">
 
-### Using Gen-Pass in Your Code
+## 🔧 **PROGRAMMING INTERFACE**
+
+</div>
 
 ```python
-from main import PasswordGenerator
+from main import PasswordGenerator, MatrixUI
 
-# Create generator instance
-generator = PasswordGenerator()
+# Initialize with visual effects
+generator = PasswordGenerator(ui_mode="matrix")
+ui = MatrixUI()
 
-# Generate a custom password
-password = generator.generate_password(
+# Launch full-screen experience
+ui.launch_matrix()
+
+# Generate with animations
+password = generator.generate_animated(
     length=16,
-    use_uppercase=True,
-    use_lowercase=True,
-    use_digits=True,
-    use_symbols=True,
-    exclude_ambiguous=True
+    animation_speed=0.1,
+    matrix_style=True,
+    banner=True
 )
 
-# Generate a passphrase
-passphrase = generator.generate_passphrase(
-    word_count=4,
-    separator="-",
-    capitalize=True,
-    add_numbers=True
-)
-
-# Check password strength
-analysis = generator.check_strength("MyPassword123!")
-print(f"Strength: {analysis['strength']}")
-print(f"Score: {analysis['score']}/100")
+# Interactive strength analysis
+analysis = generator.analyze_interactive("MyPassword123!")
 ```
 
 ---
 
-## 🛡️ Security Features
+<div align="center" class="rotating">
 
-### Cryptographic Security
-- Uses `secrets.SystemRandom()` for cryptographically secure random generation
-- No predictable patterns in generated passwords
-- Secure shuffling of password components
+## 🛡️ **SECURITY MATRIX**
 
-### Character Set Options
-- **Lowercase**: a-z (26 characters)
-- **Uppercase**: A-Z (26 characters)  
-- **Digits**: 0-9 (10 characters)
-- **Symbols**: !@#$%^&*()_+-=[]{}|;:,.<>? (23 characters)
-- **Ambiguous Exclusion**: Optionally excludes 0, O, 1, l, I
+</div>
 
-### Password Strength Analysis
-The built-in strength checker evaluates:
-- Length adequacy
-- Character variety
-- Common password detection
-- Provides actionable feedback
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0;">
 
----
+<div class="glowing" style="padding: 15px; border: 1px solid #ff0000; border-radius: 8px;">
+<h3>🔐 Quantum Security</h3>
+<ul>
+<li>secrets.SystemRandom()</li>
+<li>Military-grade entropy</li>
+<li>Zero predictability</li>
+</ul>
+</div>
 
-## 📖 Examples
+<div class="pulsing" style="padding: 15px; border: 1px solid #ff0000; border-radius: 8px;">
+<h3>🎨 Visual Security</h3>
+<ul>
+<li>Matrix-style display</li>
+<li>Animated feedback</li>
+<li>3D strength meters</li>
+</ul>
+</div>
 
-### Example Outputs
+<div class="floating" style="padding: 15px; border: 1px solid #ff0000; border-radius: 8px;">
+<h3>⚡ Performance</h3>
+<ul>
+<li>Instant generation</li>
+<li>Smooth animations</li>
+<li>Full-screen rendering</li>
+</ul>
+</div>
 
-**Standard Password:**
-```
-$ python main.py --length 16
-Password 1: K#9mP2$vX@4nL8qZ
-```
-
-**Passphrase:**
-```
-$ python main.py --passphrase --words 4
-Passphrase 1: Magic-Thunder-Ocean-Dream-47
-```
-
-**Strength Analysis:**
-```
-$ python main.py --check "MyPassword123!"
-
-Password Strength Analysis:
-Password: MyPassword123!
-Strength: Strong
-Score: 75/100
-Length: 13
-Character Types:
-  - Lowercase: ✓
-  - Uppercase: ✓
-  - Digits: ✓
-  - Symbols: ✓
-```
-
-### Batch Generation
-```bash
-$ python main.py --count 3 --length 14
-Password 1: 8mK@2vP#5nX9qL
-Password 2: R7$jD4&zM1@sF6
-Password 3: Q3!wE8*tY5#uI0
-```
+</div>
 
 ---
 
-## 🤝 Contributing
+<div align="center">
 
-Contributions are welcome! Here's how you can help:
+## 🎮 **INTERACTIVE DEMO**
 
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open** a Pull Request
+![Demo GIF](https://via.placeholder.com/600x300/000000/FF0000?text=🔴+ANIMATED+DEMO+🔴)
 
-### Development Setup
+**Click to experience the Matrix!**
+
+</div>
+
+---
+
+<div class="glowing">
+
+## 🚀 **QUICK START MATRIX**
+
+</div>
 
 ```bash
-git clone https://github.com/Gen-Spider/Gen-pass.git
-cd Gen-pass
-python -m pytest tests/  # Run tests (when available)
+# Essential commands for matrix experience
+python main.py                          # Enter the Matrix
+python main.py --matrix --animate       # Full experience
+python main.py --banner --interactive   # 3D interactive mode
+python main.py --quantum --visual       # Quantum visual mode
 ```
 
 ---
 
-## 📝 License
+<div align="center" class="rotating">
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## 🌟 **CONTRIBUTE TO THE MATRIX**
 
----
+</div>
 
-## 🔗 Links
+<div class="pulsing" style="text-align: center; padding: 20px;">
 
-- **Repository**: [Gen-Spider/Gen-pass](https://github.com/Gen-Spider/Gen-pass)
-- **Issues**: [Report a Bug](https://github.com/Gen-Spider/Gen-pass/issues)
-- **Security**: For security concerns, please email the maintainer
+1. **🍴 Fork** the quantum repository
+2. **🔧 Create** your feature matrix (`git checkout -b feature/matrix-enhancement`)
+3. **💫 Commit** your quantum changes (`git commit -m 'Add matrix feature'`)
+4. **🚀 Push** to the matrix (`git push origin feature/matrix-enhancement`)
+5. **🎯 Open** a Quantum Pull Request
 
----
-
-## ⚡ Quick Reference
-
-```bash
-# Most common use cases
-python main.py                          # Basic 12-char password
-python main.py -l 20 -c 5              # 5 passwords, 20 chars each
-python main.py --passphrase             # Memorable passphrase
-python main.py --check "password"       # Check password strength
-python main.py --exclude-ambiguous      # No confusing characters
-```
+</div>
 
 ---
 
-**Made with ❤️ by Gen-Spider** | **Stay Secure!** 🔐
+<div align="center" class="glowing">
+
+## 🔗 **MATRIX LINKS**
+
+[![Repository](https://img.shields.io/badge/🏠_Repository-Gen--Spider/Gen--pass-red?style=for-the-badge&logo=github)](https://github.com/Gen-Spider/Gen-pass)
+[![Issues](https://img.shields.io/badge/🐛_Issues-Report_Bug-red?style=for-the-badge&logo=bug)](https://github.com/Gen-Spider/Gen-pass/issues)
+[![Security](https://img.shields.io/badge/🛡️_Security-Contact_Maintainer-red?style=for-the-badge&logo=security)](mailto:security@gen-spider.com)
+
+</div>
+
+---
+
+<div align="center" class="floating">
+
+## ⚡ **MATRIX REFERENCE**
+
+</div>
+
+<div style="background: linear-gradient(45deg, #1a1a1a, #2d2d2d); padding: 20px; border-radius: 10px; border: 2px solid #ff0000;">
+
+| Command | Matrix Effect | Visual Impact |
+|---------|---------------|---------------|
+| `python main.py --matrix` | Full-screen red environment | 🔴 Complete immersion |
+| `python main.py --animate` | Delayed text animations | ⚡ Smooth rendering |
+| `python main.py --banner` | 3D Gen-Spider logo | 🎯 Rotating banner |
+| `python main.py --interactive` | 3D menu system | 🎮 Full interaction |
+
+</div>
+
+---
+
+<div align="center" class="pulsing">
+
+<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=35&duration=2000&pause=1000&color=FF0000&center=true&vCenter=true&width=600&height=70&lines=Made+with+❤️+by+Gen-Spider;Enter+the+Matrix!+🔴;Stay+Secure!+🔐" alt="Footer Animation" />
+
+</div>
+
+<div align="center" class="rotating">
+
+**🔴 WELCOME TO THE PASSWORD MATRIX 🔴**
+
+</div>
