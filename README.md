@@ -94,275 +94,56 @@ Hidden CSS Animations (Preserved for compatible viewers)
 </div>
 
 ```bash
-# Clone the quantum repository
+# Clone the repository
 git clone https://github.com/Gen-Spider/Gen-pass.git
 cd Gen-pass
 
-# Install dependencies for enhanced UI
+# Install dependencies
 pip install -r requirements.txt
 
-# Launch the matrix
+# If installation fails or you prefer isolation, use a virtual environment
+python -m venv venv
+# Activate venv
+#  - Windows (PowerShell): venv\Scripts\Activate.ps1
+#  - Windows (CMD):       venv\Scripts\activate.bat
+#  - macOS/Linux:         source venv/bin/activate
+
+# Upgrade pip and install again inside venv
+python -m pip install --upgrade pip setuptools wheel
+pip install -r requirements.txt
+
+# Launch the app
 python main.py
 ```
 
 ---
 
-<div class="floating">
+## 🧰 Troubleshooting installations
+
+- Verify Python is available: `python --version` (or `python3 --version` on some systems)
+- If `pip` points to a different Python, install with: `python -m pip install -r requirements.txt`
+- If behind a proxy: `pip --proxy http://user:pass@host:port install -r requirements.txt`
+- To exit the venv when done: `deactivate`
+
+---
 
 ## 🎮 **TERMINAL EXPERIENCE**
 
-</div>
-
-<div align="center">
-
 ```
-╔═══════════════════════════════════════════════════════════════════════╗
-║                      🔴 FULL SCREEN TERMINAL 🔴                      ║
-║                                                                       ║
-║    ██████╗ ███████╗███╗   ██╗      ███████╗██████╗ ██╗██████╗ ███████║
-║    ██╔══██╗██╔════╝████╗  ██║      ██╔════╝██╔══██╗██║██╔══██╗██╔════║
-║    ██║  ██║█████╗  ██╔██╗ ██║█████╗███████╗██████╔╝██║██║  ██║█████╗ ║
-║    ██║  ██║██╔══╝  ██║╚██╗██║╚════╝╚════██║██╔═══╝ ██║██║  ██║██╔══╝ ║
-║    ██████╔╝███████╗██║ ╚████║      ███████║██║     ██║██████╔╝███████║
-║    ╚═════╝ ╚══════╝╚═╝  ╚═══╝      ╚══════╝╚═╝     ╚═╝╚═════╝ ╚══════║
-║                                                                       ║
-║                    🔴 RED MATRIX ENVIRONMENT 🔴                      ║
-╚═══════════════════════════════════════════════════════════════════════╝
+[ Matrix UI preview ]
 ```
-
-</div>
-
-**Experience the Matrix:**
-- 🖥️ **Full-Screen Terminal Interface**
-- 🎯 **3D Gen-Spider Banner Animation**
-- 🔴 **Red Matrix Environment**
-- ⚡ **Delayed Text Animations**
-- 🌟 **Interactive Menu System**
-- 🎨 **ASCII Art Visualizations**
 
 ---
 
-<div class="glowing">
-
-## 🎯 **ADVANCED USAGE**
-
-</div>
-
-### 🔥 **Matrix Mode**
+## 📚 Usage
 ```bash
-# Launch full-screen matrix mode
-python main.py --matrix
-
-# Interactive 3D menu
-python main.py --interactive
-
-# Animated generation
-python main.py --animate --length 20
-```
-
-### 🚀 **Quantum Generation**
-```bash
-# Quantum-secure passwords
-python main.py --quantum --length 32
-
-# Matrix passphrases
-python main.py --passphrase --matrix-style
-
-# Batch generation with animations
-python main.py --batch 10 --animate
+python main.py --length 16
+python main.py --count 5
+python main.py --passphrase --words 5
+python main.py --check "MyPassword123!"
 ```
 
 ---
 
-<div align="center" class="pulsing">
-
-## 🎨 **VISUAL FEATURES**
-
-</div>
-
-<div style="display: flex; justify-content: space-around; align-items: center;">
-
-<div class="floating" style="text-align: center;">
-<h3>🔴 Matrix Theme</h3>
-<p>Full red environment with falling characters</p>
-</div>
-
-<div class="rotating" style="text-align: center;">
-<h3>🎯 3D Banner</h3>
-<p>Animated Gen-Spider logo with depth</p>
-</div>
-
-<div class="glowing" style="text-align: center;">
-<h3>⚡ Animations</h3>
-<p>Smooth delayed text rendering</p>
-</div>
-
-</div>
-
----
-
-<div class="floating">
-
-## 🔧 **PROGRAMMING INTERFACE**
-
-</div>
-
-```python
-from main import PasswordGenerator, MatrixUI
-
-# Initialize with visual effects
-generator = PasswordGenerator(ui_mode="matrix")
-ui = MatrixUI()
-
-# Launch full-screen experience
-ui.launch_matrix()
-
-# Generate with animations
-password = generator.generate_animated(
-    length=16,
-    animation_speed=0.1,
-    matrix_style=True,
-    banner=True
-)
-
-# Interactive strength analysis
-analysis = generator.analyze_interactive("MyPassword123!")
-```
-
----
-
-<div align="center" class="rotating">
-
-## 🛡️ **SECURITY MATRIX**
-
-</div>
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0;">
-
-<div class="glowing" style="padding: 15px; border: 1px solid #ff0000; border-radius: 8px;">
-<h3>🔐 Quantum Security</h3>
-<ul>
-<li>secrets.SystemRandom()</li>
-<li>Military-grade entropy</li>
-<li>Zero predictability</li>
-</ul>
-</div>
-
-<div class="pulsing" style="padding: 15px; border: 1px solid #ff0000; border-radius: 8px;">
-<h3>🎨 Visual Security</h3>
-<ul>
-<li>Matrix-style display</li>
-<li>Animated feedback</li>
-<li>3D strength meters</li>
-</ul>
-</div>
-
-<div class="floating" style="padding: 15px; border: 1px solid #ff0000; border-radius: 8px;">
-<h3>⚡ Performance</h3>
-<ul>
-<li>Instant generation</li>
-<li>Smooth animations</li>
-<li>Full-screen rendering</li>
-</ul>
-</div>
-
-</div>
-
----
-
-<div align="center">
-
-## 🎮 **INTERACTIVE DEMO**
-
-```
-🔴 TERMINAL ANIMATION PREVIEW 🔴
-
-[█████████████████████████████████████████████] 100%
-Generating quantum-secure password...
-Password: X#9mK@2vL8$nP5qZ4!wE7*tY1&uI0
-Strength: ████████████████████████ MAXIMUM
-Matrix Mode: ACTIVATED ✓
-```
-
-**Experience the full terminal animation!**
-
-</div>
-
----
-
-<div class="glowing">
-
-## 🚀 **QUICK START MATRIX**
-
-</div>
-
-```bash
-# Essential commands for matrix experience
-python main.py                          # Enter the Matrix
-python main.py --matrix --animate       # Full experience
-python main.py --banner --interactive   # 3D interactive mode
-python main.py --quantum --visual       # Quantum visual mode
-```
-
----
-
-<div align="center" class="rotating">
-
-## 🌟 **CONTRIBUTE TO THE MATRIX**
-
-</div>
-
-<div class="pulsing" style="text-align: center; padding: 20px;">
-
-1. **🍴 Fork** the quantum repository
-2. **🔧 Create** your feature matrix (`git checkout -b feature/matrix-enhancement`)
-3. **💫 Commit** your quantum changes (`git commit -m 'Add matrix feature'`)
-4. **🚀 Push** to the matrix (`git push origin feature/matrix-enhancement`)
-5. **🎯 Open** a Quantum Pull Request
-
-</div>
-
----
-
-<div align="center" class="glowing">
-
-## 🔗 **MATRIX LINKS**
-
-[![Repository](https://img.shields.io/badge/🏠_Repository-Gen--Spider/Gen--pass-red?style=for-the-badge&logo=github)](https://github.com/Gen-Spider/Gen-pass)
-[![Issues](https://img.shields.io/badge/🐛_Issues-Report_Bug-red?style=for-the-badge&logo=bug)](https://github.com/Gen-Spider/Gen-pass/issues)
-[![Security](https://img.shields.io/badge/🛡️_Security-Contact_Maintainer-red?style=for-the-badge&logo=security)](mailto:security@gen-spider.com)
-
-</div>
-
----
-
-<div align="center" class="floating">
-
-## ⚡ **MATRIX REFERENCE**
-
-</div>
-
-<div style="background: linear-gradient(45deg, #1a1a1a, #2d2d2d); padding: 20px; border-radius: 10px; border: 2px solid #ff0000;">
-
-| Command | Matrix Effect | Visual Impact |
-|---------|---------------|---------------|
-| `python main.py --matrix` | Full-screen red environment | 🔴 Complete immersion |
-| `python main.py --animate` | Delayed text animations | ⚡ Smooth rendering |
-| `python main.py --banner` | 3D Gen-Spider logo | 🎯 Rotating banner |
-| `python main.py --interactive` | 3D menu system | 🎮 Full interaction |
-
-</div>
-
----
-
-<div align="center" class="pulsing">
-
-<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=35&duration=2000&pause=1000&color=FF0000&center=true&vCenter=true&width=600&height=70&lines=Made+with+❤️+by+Gen-Spider;Enter+the+Matrix!+🔴;Stay+Secure!+🔐" alt="Footer Animation" />
-
-</div>
-
-<div align="center" class="rotating">
-
-**🔴 WELCOME TO THE PASSWORD MATRIX 🔴**
-
-</div>
+## 📝 License
+MIT
